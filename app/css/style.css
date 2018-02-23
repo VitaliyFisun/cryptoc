@@ -1,0 +1,591 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+.img-rounded {
+  display: block;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.clearfix, .rates, .chart-tabs {
+  clear: both;
+}
+
+.clearfix:before, .rates:before, .chart-tabs:before, .clearfix:after, .rates:after, .chart-tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+.centered {
+  height: 100%;
+  text-align: center;
+}
+
+.centered:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin-right: -0.3em;
+}
+
+.centered-inner {
+  display: inline-block;
+  width: 95%;
+  vertical-align: middle;
+}
+
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url("../fonts/ProximaNova-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url("../fonts/ProximaNova-Light.ttf");
+}
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url("../fonts/11096.otf");
+}
+
+@font-face {
+  font-family: 'Centuma-Bold';
+  src: url("../fonts/Centuma-Bold.otf");
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: 'ProximaNova-Regular';
+  height: 100%;
+  min-height: 1920px;
+  background: #202324;
+}
+
+#app {
+  width: 1080px;
+  padding: 60px;
+  min-height: 1920px;
+  background: -webkit-gradient(linear, right top, left top, from(#0d2026), to(#14263d));
+  background: -webkit-linear-gradient(right, #0d2026, #14263d);
+  background: -o-linear-gradient(right, #0d2026, #14263d);
+  background: linear-gradient(-90deg, #0d2026, #14263d);
+  min-height: 100%;
+}
+
+#app.content-2 {
+  background: -webkit-gradient(linear, left top, right top, from(#14161d), to(#132539));
+  background: -webkit-linear-gradient(left, #14161d, #132539);
+  background: -o-linear-gradient(left, #14161d, #132539);
+  background: linear-gradient(90deg, #14161d, #132539);
+}
+
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+  background-image: url("../img/splash-bg.jpg");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center center;
+  display: none;
+}
+
+#splash .splash-logo {
+  display: block;
+  width: 420px;
+  margin: 0 auto 70px;
+}
+
+#splash h1 {
+  margin: 0;
+  font-size: 90px;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-family: 'Centuma-Bold';
+}
+
+#splash .splash-footer {
+  position: absolute;
+  bottom: 65px;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'ProximaNova-Regular';
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.show-splash {
+  height: 100%;
+  overflow: hidden;
+}
+
+.show-splash #splash {
+  display: block;
+}
+
+.header {
+  width: 100%;
+}
+
+.header_converter {
+  font-size: 70px;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.header_converter span {
+  vertical-align: middle;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.header_converter img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.select-currency {
+  margin-top: 135px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #3b7cff;
+  font-size: 50px;
+  font-family: 'ProximaNova-Light';
+}
+
+.coin {
+  padding: 30px 0;
+  background: transparent;
+  -webkit-border-radius: 13px;
+          border-radius: 13px;
+  margin-bottom: 0px;
+}
+
+.coin-img {
+  width: 210px;
+  padding: 0 35px 0 35px;
+  float: left;
+  margin-top: 10px;
+}
+
+.coin-text {
+  float: left;
+  font-size: 50px;
+  width: 745px;
+}
+
+.coin-names {
+  float: left;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.coin-name {
+  font-family: 'ProximaNova-Light';
+  margin: 30px 0;
+}
+
+.coin-symbol {
+  font-family: 'ProximaNova-Regular';
+}
+
+.coin-rate {
+  float: right;
+  font-family: 'ProximaNova-Regular';
+  color: #fff;
+  margin-top: 60px;
+  padding-right: 35px;
+}
+
+.not-available {
+  display: none;
+}
+
+.small-logo {
+  display: block;
+  max-width: 260px;
+  height: auto;
+  margin: 0 auto 40px;
+}
+
+#root-view {
+  position: relative;
+}
+
+.converter {
+  font-size: 76px;
+  color: #3b7cff;
+  font-family: 'ProximaNova-Regular';
+  position: relative;
+  z-index: 100;
+}
+
+.input {
+  width: 480px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 115px;
+  font-family: 'ProximaNova-Regular';
+  outline: none;
+  font-size: 50px;
+  padding: 0 20px;
+  border: 0 none;
+  text-align: left;
+  background: #94a9ba;
+}
+
+.waves {
+  position: absolute;
+  height: 1348px;
+  background-image: url("../img/waves.png");
+  left: -60px;
+  right: -60px;
+  -webkit-background-size: cover;
+          background-size: cover;
+  top: 50px;
+  z-index: 0;
+}
+
+.rates {
+  margin-top: 75px;
+  margin-bottom: 70px;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.rates .high,
+.rates .low {
+  float: left;
+  width: 50%;
+}
+
+.rates .high {
+  padding-left: 20px;
+}
+
+.rates .low {
+  padding-right: 20px;
+}
+
+.rating__inner {
+  height: 210px;
+  background: rgba(255, 255, 255, 0.2);
+  padding-top: 45px;
+  padding-left: 55px;
+}
+
+.rating__type {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.rating__price {
+  font-size: 70px;
+}
+
+.chart-tabs {
+  position: relative;
+  z-index: 100;
+}
+
+.chart-tabs .tab {
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+}
+
+.tab__inner {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  color: #132336;
+  height: 120px;
+  font-size: 50px;
+  line-height: 120px;
+}
+
+#chart {
+  position: relative;
+  z-index: 1000;
+  margin-top: 90px;
+}
+
+.low-high {
+  position: relative;
+  z-index: 100;
+  font-size: 50px;
+  color: #e59b2c;
+  text-transform: uppercase;
+  text-align: center;
+  height: 115px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 160px -60px 80px;
+  line-height: 115px;
+}
+
+.low-high span {
+  color: #fff;
+}
+
+.low-high .low-high__inner {
+  display: inline-block;
+}
+
+.low-high .low-high__inner + .low-high__inner {
+  margin-left: 50px;
+}
+
+.select-currency {
+  color: #fff;
+  text-align: left;
+  position: relative;
+  z-index: 100;
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.converter .coin-img {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  width: 82px;
+  padding: 0;
+}
+
+.converter .symbol {
+  height: 115px;
+  width: 285px;
+  background: #fff;
+  line-height: 115px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.converter .group {
+  margin-bottom: 40px;
+}

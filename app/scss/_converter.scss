@@ -1,0 +1,153 @@
+#root-view {
+    //overflow-x: hidden;
+    position: relative;
+}
+
+.converter {
+    font-size: 76px;
+    color: #3b7cff;
+    font-family: 'ProximaNova-Regular';
+    position: relative;
+    z-index: 100;
+}
+
+.input {
+    width: 480px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 115px;
+    font-family: 'ProximaNova-Regular';
+    outline: none;
+    font-size: 50px;
+    padding: 0 20px;
+    border: 0 none;
+    text-align: left;
+    background: #94a9ba;
+}
+
+.waves {
+    position: absolute;
+    height: 1348px;
+    background-image: url('../img/waves.png');
+    left: -60px;
+    right: -60px;
+    background-size: cover;
+    top: 50px;
+    z-index: 0;
+}
+
+.rates {
+    margin-top: 75px;
+    margin-bottom: 70px;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    @extend .clearfix;
+    .high,
+    .low {
+        float: left;
+        width: 50%;
+    }
+    .high {
+        padding-left: 20px;
+    }
+    .low {
+        padding-right: 20px;
+    }
+}
+
+.rating__inner {
+    height: 210px;
+    background: rgba(255, 255, 255, 0.2);
+    padding-top: 45px;
+    padding-left: 55px;
+}
+
+.rating__type {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.rating__price {
+    font-size: 70px;
+}
+
+.chart-tabs {
+    @extend .clearfix;
+    position: relative;
+    z-index: 100;
+    .tab {
+        float: left;
+        width: 50%;
+        padding: 0 20px;
+    }
+}
+
+.tab__inner {
+    text-align: center;
+    background: rgba(255,255,255,0.75);
+    color: #132336;
+    height: 120px;
+    font-size: 50px;
+    line-height: 120px;
+}
+
+#chart {
+    position: relative;
+    z-index: 1000;
+    margin-top: 90px;
+}
+
+.low-high {
+    position: relative;
+    z-index: 100;
+    font-size: 50px;
+    color: #e59b2c;
+    text-transform: uppercase;
+    text-align: center;
+    height: 115px;
+    background: rgba(0,0,0,0.2);
+    margin: 160px -60px 80px;
+    line-height: 115px;
+    span {
+        color: #fff;
+    }
+    .low-high__inner {
+        display: inline-block;
+        +.low-high__inner {
+            margin-left: 50px;
+        }
+    }
+}
+
+.select-currency {
+    color: #fff;
+    text-align: left;
+    position: relative;
+    z-index: 100;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.converter {
+    .coin-img {
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+        width: 82px;
+        padding: 0;
+    }
+    .symbol {
+        height: 115px;
+        width: 285px;
+        background: #fff;
+        line-height: 115px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .group {
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,26 @@
+<header id="header" class="header">
+    <img src="img/splash.svg" alt="" class="small-logo">
+</header>
+<ul class="coins-list">
+    <% _.each(data, function(c, i){ %>
+        <li class="<%= c.Rating == 'N/A' ? 'not-available clearfix' : 'coin clearfix' %>" data-item-id="<%= i %>">
+            <div class="coin-img">
+                <img src="https://www.cryptocompare.com/<%= c.ImageUrl %>" alt="<%= c.Symbol %>" class="img-responsive">
+            </div>
+            <div class="coin-text">
+                <div class="coin-names">
+                    <div class="coin-symbol">
+                        <%= c.Symbol %>
+                    </div>
+                    <div class="coin-name">
+                        <%= c.CoinName %>
+                    </div>
+                </div>
+                <div class="coin-rate">
+                    USD
+                    <%= ((+c.Rating).toFixed(5)*1).toString() %>
+                </div>
+            </div>
+        </li>
+        <% }) %>
+</ul>

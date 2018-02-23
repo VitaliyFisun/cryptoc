@@ -1,0 +1,62 @@
+.select-currency {
+    margin-top: 135px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #3b7cff;
+    font-size: 50px;
+    font-family: 'ProximaNova-Light';
+}
+
+.coin {
+    padding: 30px 0;
+    background: transparent;
+    border-radius: 13px;
+    margin-bottom: 0px;
+}
+
+.coin-img {
+    width: 210px;
+    padding: 0 35px 0 35px;
+    float: left;
+    margin-top: 10px;
+}
+
+.coin-text {
+    float: left;
+    font-size: 50px;
+    width: 745px;
+}
+
+.coin-names {
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.coin-name {
+    font-family: 'ProximaNova-Light';
+    margin: 30px 0;
+}
+
+.coin-symbol {
+    font-family: 'ProximaNova-Regular';
+}
+
+.coin-rate {
+    float: right;
+    font-family: 'ProximaNova-Regular';
+    color: #fff;
+    margin-top: 60px;
+    padding-right: 35px;
+}
+
+.not-available {
+    display: none;
+}
+
+.small-logo {
+    display: block;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto 40px;
+}

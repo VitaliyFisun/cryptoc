@@ -1,0 +1,83 @@
+<div class="header header_converter">
+    <span class="back-btn"><img src="img/back.png" alt="">
+        <%= cryptoSymbol %>/
+            <%= currencySymbol %>
+    </span>
+
+</div>
+
+<div class="waves"></div>
+
+<div class="rates">
+    <div class="low">
+        <div class="rating__inner">
+            <div class="rating__type">Low 24 hour</div>
+            <div class="rating__price">
+                <%= ((+coin.Other.LOW24HOUR).toFixed(5)*1).toString() %>
+            </div>
+        </div>
+    </div>
+    <div class="high">
+        <div class="rating__inner">
+            <div class="rating__type">High 24 hour</div>
+            <div class="rating__price">
+                <%= ((+coin.Other.HIGH24HOUR).toFixed(5)*1).toString() %>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="chart-tabs">
+    <div class="tab" data-type="day">
+        <div class="tab__inner">
+            Day
+        </div>
+    </div>
+    <div class="tab" data-type="month">
+        <div class="tab__inner">
+            Month
+        </div>
+    </div>
+</div>
+
+<canvas id="chart"></canvas>
+
+<div class="low-high">
+    <div class="low-high__inner">
+        LOW
+        <span id="low"><%= chartLow %></span>
+    </div>
+    <div class="low-high__inner">
+        High
+        <span id="high"><%= chartHigh %></span>
+    </div>
+</div>
+
+
+
+<div class="select-currency">
+    Converter
+</div>
+
+<div class="converter">
+    <div class="from group">
+        <div class="coin-img">
+            <img src="https://www.cryptocompare.com/<%= coin.ImageUrl %>" alt="<%= coin.Symbol %>" class="img-responsive">
+        </div>
+        <div class="from-symbol symbol">
+            <%= cryptoSymbol %>
+        </div>
+        <input type="number" class="from-value input">
+    </div>
+    <div id="switch"></div>
+    <div class="to group">
+        <div class="coin-img">
+            <img src="img/dollar.png" alt="dollar" class="img-responsive">
+        </div>
+        <div class="to-symbol symbol">
+            <%= currencySymbol %>
+        </div>
+        <input type="number" disabled class="to-value input">
+    </div>
+</div>
